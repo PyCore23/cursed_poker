@@ -16,12 +16,21 @@ class Colors:
         self.create_color(6, (100, 100, 100), 'black')             # BLACK
         self.create_color(7, (1000, 1000, 1000), 'white')          # WHITE
         self.create_color(8, (162*3, 221*3, 224*3), 'blue')        # BLUE 
+        self.create_color(9, (200, 700, 300), 'l_green')           # l_green
+        self.create_color(10, (700, 100, 300), 'red')              # red
+        
         
         # PAIRS
         self.create_pair(1, self.black, self.soft_green, "win_pair")
         self.create_pair(2, self.black, self.black, "black_pair")
-        self.create_pair(3, self.soft_white, self.green, "buttons_pair")
+        self.create_pair(3, self.soft_white, self.green, "buttons_base")
         self.create_pair(4, self.brown, self.brown, "full_brown")
+        self.create_pair(5, self.brown, self.soft_white, 'btn_active')
+        self.create_pair(6, self.white, self.pink, 'btn_click')
+        self.create_pair(7, self.pink, self.pink, 'shd_click')
+        self.create_pair(8, self.l_green, self.l_green, 'fast_click')
+        self.create_pair(9, self.red, self.pink, 'red_card')
+        
 
     def create_color(self, number: int, RGB: tuple, attr_color_name: str):
         if number not in self.__dict__.values():

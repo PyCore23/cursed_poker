@@ -51,6 +51,18 @@ s_4 = "              4♠                     ♠   ♠                 ♠   �
 s_3 = "              3♠                       ♠          ♠          ♠                        ♠3"
 s_2 = "              2♠                       ♠                     ♠                        ♠2"
 
-deck = {
-    card: string for card, string in list(locals().items())[9:]
-    }
+from random import choice
+
+    
+
+class Deck:
+    def __init__(self) -> None:
+        self.cards = [ 
+            [card, str_repr] for card, str_repr in list(globals().items())[9:-2]
+        ]
+        self.amount = len(self.cards)
+
+    def give_card(self) -> dict['card_name': 'string_repr']:
+        card = choice(self.cards)
+        self.cards.remove(card)
+        return card
